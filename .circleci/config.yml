@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker: # use the docker executor type; machine and macos executors are also supported
-      - image: circleci/node:8.9# the primary container, where your job's commands are run
+      - image: circleci/node:12.2.0 # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
       - run: echo "npm installing"  # run the `echo` command
@@ -10,7 +10,7 @@ jobs:
       - run: CI=true npm run build
   hello:
       docker: # use the docker executor type; machine and macos executors are also supported
-        - image: circleci/node:8.9 # the primary container, where your job's commands are run
+        - image: circleci/node:12.2.0 # the primary container, where your job's commands are run
       steps:
         - checkout # check out the code in the project directory
         - run: echo "helloooo" # run the `echo` command
