@@ -13,6 +13,7 @@ jobs:
         - checkout # check out the code in the project directory
         - run: echo "hello sally" # run the `echo` command
   workflows:
+    version:  2
     bob_sally:
       jobs:
         - bobby
